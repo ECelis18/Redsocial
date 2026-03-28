@@ -91,6 +91,6 @@ export default function ColumnIzqu() {
                 <p><strong>Hey!</strong></p>
                 <p>People are looking at your profile. Find out who.</p>
             </div>
-            </>
+        </>
     )
 }

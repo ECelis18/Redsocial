@@ -4,7 +4,7 @@ export default function ColumnDere() {
     return (
         <>
             {/* <!-- Right Column --> */}
-            <div classNameName="w3-card w3-round w3-white w3-center">
+            <div className="w3-card w3-round w3-white w3-center">
                 <div className="w3-container">
                     <p>Upcoming Events:</p>
                     <img src="https://www.w3schools.com/w3images/forest.jpg" alt="Forest" style={{ width: "100%" }} />
