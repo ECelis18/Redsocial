@@ -1,5 +1,6 @@
 import NavbarLR from "../components/NavbarLR"
 import Footer from "../components/Footer"
+import { Link, NavLink } from "react-router-dom"
 
 export default function RegistroPage() {
     return (
@@ -41,7 +42,7 @@ export default function RegistroPage() {
                         <div className="w3-section">
                             <button className="w3-button w3-theme-d2 w3-round w3-block w3-section"><i className="fa fa-user-plus"></i> Registrarse</button>
                         </div>
-                        <p className="w3-center">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a>.</p>
+                        <p className="w3-center">¿Ya tienes cuenta? <Link to="/login">Inicia sesión</Link>.</p>
                     </form>
                 </div>
             </div>
