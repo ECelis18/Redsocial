@@ -25,6 +25,7 @@ export default function Navbar() {
                             <a href="#" className="w3-bar-item w3-button">Jane likes your post</a>
                         </div>
                     </div>
+                    <a href="settings.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white"><i class="fa fa-cog"></i></a>
                     <a href="#" className="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white"
                         title="My Account">
                         <img src="https://www.w3schools.com//w3images/avatar2.png" className="w3-circle" style={{ height: "23px", width: "23px" }}
@@ -39,6 +40,7 @@ export default function Navbar() {
                 <a href="#" className="w3-bar-item w3-button w3-padding-large">Link 2</a>
                 <a href="#" className="w3-bar-item w3-button w3-padding-large">Link 3</a>
                 <a href="#" className="w3-bar-item w3-button w3-padding-large">My Profile</a>
+                <a href="settings.html" className="w3-bar-item w3-button w3-padding-large">Configuración</a>
             </div>
         </>
     )
