@@ -11,7 +11,7 @@ export default function LoginPage() {
                     <div className="w3-container w3-theme-d2 w3-round-xlarge w3-padding-16">
                         <h2 className="w3-center">Iniciar sesión</h2>
                     </div>
-                    <form className="w3-container w3-padding-24" action="plantilla-RedSocial.html" method="get">
+                    <form className="w3-container w3-padding-32">
                         <div className="w3-section">
                             <label><i className="fa fa-envelope"></i> Correo electrónico</label>
                             <input className="w3-input w3-border w3-round" type="email" placeholder="tu@email.com" required />
@@ -28,7 +28,7 @@ export default function LoginPage() {
                     </form>
                 </div>
             </div>
-
+            <br />
             <Footer />
         </>
     )

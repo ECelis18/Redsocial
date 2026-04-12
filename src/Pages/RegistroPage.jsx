@@ -45,6 +45,7 @@ export default function RegistroPage() {
                     </form>
                 </div>
             </div>
+            <br />
             <Footer />
         </>
     )
