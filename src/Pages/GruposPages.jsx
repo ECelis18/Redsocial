@@ -6,7 +6,7 @@ export default function GruposPages() {
         <>
             <Navbar />
             {/* <!-- Contenido --> */}
-            <div className="w3-container w3-content" style={{ maxWidth: '1200px', marginTop: '80px' }}>
+            <div className="w3-container w3-content" style={{ maxWidth: '1200px', marginTop: '80px', marginBottom: '80px' }}>
                 <div className="w3-row-padding">
                     {/* <!-- Columna izquierda: Mis grupos --> */}
                     <div className="w3-col m6">
@@ -79,7 +79,6 @@ export default function GruposPages() {
                     </div>
                 </div>
             </div>
-            <br />
             <Footer />
 
         </>

@@ -7,7 +7,7 @@ export default function ChatPage() {
             <Navbar />
             <body className="w3-theme-l5">
                 {/* <!-- Contenedor principal --> */}
-                <div className="w3-container w3-content" style={{ maxWidth: '1200px', marginTop: '80px' }}>
+                <div className="w3-container w3-content" style={{ maxWidth: '1200px', marginTop: '80px', marginBottom: '40px' }}>
                     <div className="w3-row">
                         {/* <!-- Lista de chats --> */}
                         <div className="w3-col m4">

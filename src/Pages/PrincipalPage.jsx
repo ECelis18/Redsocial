@@ -103,6 +103,7 @@ export default function PrincipalPage() {
                     </div>
                 </div >
             </div >
+            <br />
             <Footer />
         </>
     )

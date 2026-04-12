@@ -1,6 +1,19 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 
 export default function ColumnIzqu() {
+    const [mostrarAcordeon, setMostrarAcordeon] = useState(null)
+    const [mostrarAlerta, setMostrarAlerta] = useState(true)
+
+    const alternarAcordeon = (id) => {
+        if (mostrarAcordeon === id) {
+            setMostrarAcordeon(null)
+        } else {
+            setMostrarAcordeon(id)
+        }
+    };
+
+
     return (
         <>
 
@@ -21,19 +34,19 @@ export default function ColumnIzqu() {
             {/* <!-- Accordion --> */}
             <div className="w3-card w3-round">
                 <div className="w3-white">
-                    <button onclick="myFunction('Demo1')" className="w3-button w3-block w3-theme-l1 w3-left-align"><i
+                    <button onClick={() => alternarAcordeon('Demo1')} className="w3-button w3-block w3-theme-l1 w3-left-align"><i
                         className="fa fa-circle-o-notch fa-fw w3-margin-right"></i> My Groups</button>
-                    <div id="Demo1" className="w3-hide w3-container">
+                    <div id="Demo1" className={mostrarAcordeon === 'Demo1' ? "w3-container" : "w3-hide w3-container"}>
                         <p>Some text..</p>
                     </div>
-                    <button onclick="myFunction('Demo2')" className="w3-button w3-block w3-theme-l1 w3-left-align"><i
+                    <button onClick={() => alternarAcordeon('Demo2')} className="w3-button w3-block w3-theme-l1 w3-left-align"><i
                         className="fa fa-calendar-check-o fa-fw w3-margin-right"></i> My Events</button>
-                    <div id="Demo2" className="w3-hide w3-container">
+                    <div id="Demo2" className={mostrarAcordeon === 'Demo2' ? "w3-container" : "w3-hide w3-container"}>
                         <p>Some other text..</p>
                     </div>
-                    <button onclick="myFunction('Demo3')" className="w3-button w3-block w3-theme-l1 w3-left-align"><i
+                    <button onClick={() => alternarAcordeon('Demo3')} className="w3-button w3-block w3-theme-l1 w3-left-align"><i
                         className="fa fa-users fa-fw w3-margin-right"></i> My Photos</button>
-                    <div id="Demo3" className="w3-hide w3-container">
+                    <div id="Demo3" className={mostrarAcordeon === 'Demo3' ? "w3-container" : "w3-hide w3-container"}>
                         <div className="w3-row-padding">
                             <br />
                             <div className="w3-half">
@@ -85,7 +98,12 @@ export default function ColumnIzqu() {
             {/* <!-- Alert Box --> */}
             <div
                 className="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
-                <span onclick="this.parentElement.style.display='none'" className="w3-button w3-theme-l3 w3-display-topright">
+                <span onClick={(e) => {
+                    const container = e.target.closest('.w3-container');
+                    if (container) {
+                        container.style.display = 'none';
+                    }
+                }} className="w3-button w3-theme-l3 w3-display-topright">
                     <i className="fa fa-remove"></i>
                 </span>
                 <p><strong>Hey!</strong></p>

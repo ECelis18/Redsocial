@@ -6,7 +6,7 @@ export default function ConfiguracionPage() {
         <>
             <Navbar />
             {/* <!-- Contenido --> */}
-            <div className="w3-container w3-content" style={{ maxWidth: '1000px', marginTop: '80px' }}>
+            <div className="w3-container w3-content" style={{ maxWidth: '1000px', marginTop: '80px', marginBottom: '20px' }}>
                 <div className="w3-card w3-round w3-white">
                     <div className="w3-container w3-padding-16 w3-theme-d2">
                         <h2><i className="fa fa-cogs"></i> Configuración de la cuenta</h2>

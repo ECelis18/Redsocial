@@ -10,7 +10,7 @@ export default function Publicaciones(props) {
                     const [textoComentario, setTextoComentario] = useState('')
 
                     return (
-                        <div className="w3-container w3-card w3-white w3-round w3-margin" key={publicacion.id}><br />
+                        <div className="w3-container w3-card w3-white w3-round w3-margin" key={publicacion.id} style={{ paddingBottom: "15px" }}><br />
                             <img src={publicacion.perfil} alt="Avatar"
                                 className="w3-left w3-circle w3-margin-right" style={{ width: "60px" }} />
                             <span className="w3-right w3-opacity">{publicacion.tiempo}</span>
@@ -25,33 +25,34 @@ export default function Publicaciones(props) {
                                 ))}
                             </div>
 
+
                             {/* Botón Like */}
                             <button type="button" className="w3-button w3-theme-d1 w3-margin-bottom"
                                 onClick={() => props.Like(publicacion.id)}>
                                 <i className="fa fa-thumbs-up"></i> Like
                             </button>
-                            <span>{publicacion.likes} likes</span>
+                            <span className='w3-margin-left'>{publicacion.likes} likes</span>
 
-                            {/* Input de comentario */}
-                            <input
-                                className="w3-input w3-border"
-                                type="text"
-                                placeholder="Escribe un comentario..."
-                                value={textoComentario}
-                                onChange={(e) => setTextoComentario(e.target.value)}
-                            />
-
-                            {/* Botón enviar */}
-                            <button
-                                className="w3-button w3-theme-d2 w3-margin-bottom"
-                                onClick={() => {
-                                    if (textoComentario.trim() !== '') {
-                                        props.verComentario(publicacion.id, textoComentario)
-                                        setTextoComentario('')
-                                    }
-                                }}>
-                                Enviar
-                            </button>
+                            <div style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
+                                <input
+                                    className="w3-input w3-border"
+                                    type="text"
+                                    placeholder="Escribe un comentario..."
+                                    style={{ flex: 1 }}
+                                    value={textoComentario}
+                                    onChange={(e) => setTextoComentario(e.target.value)}
+                                />
+                                <button
+                                    className="w3-button w3-theme-d2"
+                                    onClick={() => {
+                                        if (textoComentario.trim() !== '') {
+                                            props.verComentario(publicacion.id, textoComentario)
+                                            setTextoComentario('')
+                                        }
+                                    }}>
+                                    Enviar
+                                </button>
+                            </div>
 
                             {/* Mostrar comentarios existentes */}
                             {publicacion.comentarios.length > 0 && (
