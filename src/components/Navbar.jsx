@@ -1,6 +1,11 @@
-import { Link, NavLink } from "react-router-dom"
+import { Link, NavLink, useNavigate } from "react-router-dom"
 
-export default function Navbar() {
+export default function Navbar({ onLogout }) {
+    const navigate = useNavigate();
+    const handleLogout = () => {// si usas token
+        onLogout();
+        navigate("/login");
+    };
     return (
         <>
             {/* <!-- Navbar --> */}
@@ -10,7 +15,7 @@ export default function Navbar() {
                     <a className="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2"
                         href="javascript:void(0);" onclick="openNav()"><i className="fa fa-bars"></i></a>
                     {/*  Logo  */}
-                    <NavLink to="/" className="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i
+                    <NavLink to="/principal" className="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i
                         className="fa fa-home w3-margin-right"></i>Logo</NavLink>
                     {/*  News  */}
                     <NavLink to="/news" className="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i
@@ -37,6 +42,10 @@ export default function Navbar() {
                         <img src="https://www.w3schools.com//w3images/avatar2.png" className="w3-circle" style={{ height: "23px", width: "23px" }}
                             alt="Avatar" />
                     </NavLink>
+                    <button onClick={handleLogout} 
+                    className="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white">
+                        <i className="bi bi-door-closed"></i>
+                    </button>
                 </div>
             </div>
 

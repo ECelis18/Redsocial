@@ -7,7 +7,7 @@ import Publicaciones from '../components/Publicaciones'
 
 import { useState } from 'react'
 
-export default function PrincipalPage() {
+export default function PrincipalPage({ onLogout }) {
 
     const [publicaciones, setPublicaciones] = useState([
         {
@@ -85,7 +85,7 @@ export default function PrincipalPage() {
 
     return (
         <>
-            <Navbar />
+            <Navbar onLogout={onLogout} />
             < div className="w3-container w3-content" style={{ maxWidth: "1400px", marginTop: "80px" }}>
                 {/* <!-- The Grid --> */}
                 < div className="w3-row" >
