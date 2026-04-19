@@ -8,7 +8,7 @@ export default function NotFoundPage() {
         <>
             <div className="cont-404">
                 <img src={svg} alt="svg" />
-                <button><Link to="/">Back to Home</Link></button>
+                <button><Link to="/principal">Back to Home</Link></button>
             </div>
         </>
     )

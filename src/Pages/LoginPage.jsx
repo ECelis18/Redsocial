@@ -14,7 +14,7 @@ export default function LoginPage({ onLogin }) {
         console.log(data);
 
         try {
-            let respuesta = await axios.post("http://localhost/redsocialApi/login", data);
+            let respuesta = await axios.post("http://localhost/redsocial-Api/login", data);
             // alert("Bienvenido " + respuesta.data.nombre)
             onLogin();
             navigate("/");

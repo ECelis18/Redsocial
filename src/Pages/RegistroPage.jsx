@@ -14,7 +14,7 @@ export default function RegistroPage() {
         console.log("Datos del formulario");
         console.log(data);
         try {
-            let respuesta = await axios.post("http://localhost/redsocialApi/registro", {
+            let respuesta = await axios.post("http://localhost/redsocial-Api/registro", {
                 nombre: data.nombre,
                 correo: data.correo,
                 contrasena: data.contrasena,

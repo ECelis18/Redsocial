@@ -21,7 +21,6 @@ export default function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<LoginPage />} />
         <Route path="/login" element={isAuthenticate ? <Navigate to="/principal" /> : <LoginPage onLogin={handleLogin} />} />
         <Route path="/registro" element={isAuthenticate ? <Navigate to="/principal" /> : <RegistroPage />} />
         <Route path="/principal" element={isAuthenticate ? <PrincipalPage onLogout={handleLogout} /> : <Navigate to="/login" />} />
